@@ -12,7 +12,21 @@ The build artifact check imports the actual compiled Worker and exercises the HT
 
 ## Browser and publication
 
-Desktop/mobile browser checks, actual downloaded proposal packs, public HTTPS checks and the final release record are recorded under `docs/validation/` as completed. A passing local build alone is not proof of a public release. Native hosting metadata records the exact source commit and saved Site version.
+Version 1 is public without sign-in at [presales.bestdev.co.il](https://presales.bestdev.co.il/). DNS and TLS are active. All 48 unit tests, 12 scenario/export checks, type checking and the compiled Worker checks pass. The dependency audit reports zero vulnerabilities. [Windows and Linux CI](https://github.com/Simonsbs/presales-solution-workbench/actions/runs/43046670798) both pass for the initial application release.
+
+Fourteen local browser checks and ten public browser checks pass. The actual public ZIP was downloaded, independently extracted and re-imported through the app; its revision, pinned baseline, changed requirement, recommendation, authored text and stale-review flag were inspected. Desktop and 390 by 844 mobile views were checked. A passing local build alone is not proof of a public release. Native hosting metadata records each exact source commit and saved Site version.
+
+| Evidence | Result |
+| --- | --- |
+| `unit.json` | 48 passed, zero failed |
+| `domain.json` | 12 passed, source hashes and cost reconciliation |
+| `browser-local.json` | 14 local workflow, recovery and responsive checks |
+| `browser-public.json` | 10 real public browser checks |
+| `browser-export-local.json`, `browser-export-public.json` | Actual downloaded ZIP contents and hashes |
+| `hosting-smoke.json`, `public-smoke.json` | Six checks pass on each public hostname |
+| `desktop.png`, `mobile.png` | Captured public application views |
+
+The application source fingerprint is `cebc4d1eed1a561c4691c440e1d75fbc1f1c5b48e749f629430b21b08a79c4a7`. The initial release deployed application commit `bbfed695c26cec4f6d1c048c022ed0120de7ba3b`; later documentation and evidence publication keeps that application fingerprint unchanged. CI also runs for those source commits.
 
 Public checks verify application assets and local fonts, security/cache headers, documentation, source fingerprint, no sign-in, unknown routes and rejection of draft POSTs. The client workflow is checked separately because the calculation and persistence logic runs in the visitor's browser.
 

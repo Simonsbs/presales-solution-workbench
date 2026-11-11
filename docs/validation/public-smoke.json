@@ -1,0 +1,32 @@
+{
+  "url": "https://presales.bestdev.co.il",
+  "checkedAt": "2026-11-11T15:20:30.806Z",
+  "sourceFingerprint": "cebc4d1eed1a561c4691c440e1d75fbc1f1c5b48e749f629430b21b08a79c4a7",
+  "checks": [
+    {
+      "name": "HTTPS serves the standalone workbench without sign-in",
+      "passed": true
+    },
+    {
+      "name": "scripts, framing, connections and MIME handling are constrained",
+      "passed": true
+    },
+    {
+      "name": "application assets and local font references load",
+      "passed": true
+    },
+    {
+      "name": "README, decisions, validation and favicon are published",
+      "passed": true
+    },
+    {
+      "name": "health identifies the exact tested source and browser-only draft storage",
+      "passed": true
+    },
+    {
+      "name": "draft POSTs are rejected, unknown assets are 404 and HEAD has no body",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

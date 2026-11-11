@@ -1,0 +1,54 @@
+{
+  "checkedOn": "2026-11-11",
+  "url": "https://presales.bestdev.co.il/",
+  "sourceFingerprint": "cebc4d1eed1a561c4691c440e1d75fbc1f1c5b48e749f629430b21b08a79c4a7",
+  "method": "Agent-operated real browser through the public application controls",
+  "checks": [
+    {
+      "name": "Custom domain loads over HTTPS without sign-in",
+      "passed": true
+    },
+    {
+      "name": "Fresh origin starts Northstar with the managed-workflow direction",
+      "passed": true
+    },
+    {
+      "name": "Executive summary can be edited using the public UI",
+      "passed": true
+    },
+    {
+      "name": "Five-second reveal pins the previous brief and changes the recommendation to cloud events",
+      "passed": true
+    },
+    {
+      "name": "Authored wording survives and the changed-brief review flag is visible",
+      "passed": true
+    },
+    {
+      "name": "Actual proposal ZIP downloads and passes independent extraction and content checks",
+      "passed": true,
+      "evidence": "browser-export-public.json"
+    },
+    {
+      "name": "Actual exported brief re-imports and retains revision 2 and five-second requirement after reload",
+      "passed": true
+    },
+    {
+      "name": "Discovery and comparison have no document horizontal overflow at 390 by 844",
+      "passed": true,
+      "innerWidth": 390,
+      "documentScrollWidth": 380
+    },
+    {
+      "name": "Mobile navigation opens and changes to the comparison view",
+      "passed": true
+    },
+    {
+      "name": "Public browser console contains no warning or error entries",
+      "passed": true
+    }
+  ],
+  "screenshots": ["desktop.png", "mobile.png"],
+  "deploymentObservation": "The first custom-domain visit returned 404 during provider status active_redeploying. After native DNS and TLS status became active, the same URL served the application and all public checks passed.",
+  "scope": "Agent validation using fictional scenarios. Basic responsive checks do not constitute a complete accessibility audit or independent human review. No customer PoC was executed."
+}

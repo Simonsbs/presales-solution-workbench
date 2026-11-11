@@ -4,20 +4,68 @@
   "url": "http://127.0.0.1:5176/",
   "scope": "Fictional scenarios and local browser workflow. These are not completed customer PoCs or an independent human review.",
   "checks": [
-    {"name": "Northstar starts with managed workflows, then changes to cloud events after the five-second requirement", "passed": true},
-    {"name": "Edited executive summary survives the changed requirement and is flagged stale", "passed": true},
-    {"name": "Actual downloaded seven-file ZIP contains revision 2, pinned revision 1, five-second requirement and the authored wording", "passed": true, "evidence": "browser-export-local.json"},
-    {"name": "Mark reviewed clears the stale flag and preserves the authored wording", "passed": true},
-    {"name": "Unsupported JSON import displays an error and preserves the current draft", "passed": true},
-    {"name": "Actual exported brief re-imports and survives page reload", "passed": true},
-    {"name": "Harbour starts with the private service; managed-only staffing blocks every option", "passed": true},
-    {"name": "All-blocked proposal explicitly limits the plan to discovery with no implementation schedule", "passed": true},
-    {"name": "Lumen changes from cloud events to the private service when public processing is prohibited", "passed": true},
-    {"name": "390 by 844 viewport has no document horizontal overflow; the cost table scrolls inside its own container", "passed": true, "innerWidth": 390, "documentScrollWidth": 380},
-    {"name": "Mobile navigation opens, changes views, closes on selection and closes on Escape", "passed": true},
-    {"name": "Invalid zero-second freshness disables export; reload restores the last valid five-second saved brief", "passed": true},
-    {"name": "Rate review changes conditional fit to fit; a subsequent labour-rate edit clears that review", "passed": true},
-    {"name": "No warning or error console entries on the final local browser tab", "passed": true}
+    {
+      "name": "Northstar starts with managed workflows, then changes to cloud events after the five-second requirement",
+      "passed": true
+    },
+    {
+      "name": "Edited executive summary survives the changed requirement and is flagged stale",
+      "passed": true
+    },
+    {
+      "name": "Actual downloaded seven-file ZIP contains revision 2, pinned revision 1, five-second requirement and the authored wording",
+      "passed": true,
+      "evidence": "browser-export-local.json"
+    },
+    {
+      "name": "Mark reviewed clears the stale flag and preserves the authored wording",
+      "passed": true
+    },
+    {
+      "name": "Unsupported JSON import displays an error and preserves the current draft",
+      "passed": true
+    },
+    {
+      "name": "Actual exported brief re-imports and survives page reload",
+      "passed": true
+    },
+    {
+      "name": "Harbour starts with the private service; managed-only staffing blocks every option",
+      "passed": true
+    },
+    {
+      "name": "All-blocked proposal explicitly limits the plan to discovery with no implementation schedule",
+      "passed": true
+    },
+    {
+      "name": "Lumen changes from cloud events to the private service when public processing is prohibited",
+      "passed": true
+    },
+    {
+      "name": "390 by 844 viewport has no document horizontal overflow; the cost table scrolls inside its own container",
+      "passed": true,
+      "innerWidth": 390,
+      "documentScrollWidth": 380
+    },
+    {
+      "name": "Mobile navigation opens, changes views, closes on selection and closes on Escape",
+      "passed": true
+    },
+    {
+      "name": "Invalid zero-second freshness disables export; reload restores the last valid five-second saved brief",
+      "passed": true
+    },
+    {
+      "name": "Rate review changes conditional fit to fit; a subsequent labour-rate edit clears that review",
+      "passed": true
+    },
+    {
+      "name": "No warning or error console entries on the final local browser tab",
+      "passed": true
+    }
   ],
-  "limitations": ["Basic keyboard and responsive checks are not a complete accessibility audit.", "One stale preview tab encountered a transient connection failure during a Vite restart. A fresh tab restored the valid saved draft."]
+  "limitations": [
+    "Basic keyboard and responsive checks are not a complete accessibility audit.",
+    "One stale preview tab encountered a transient connection failure during a Vite restart. A fresh tab restored the valid saved draft."
+  ]
 }

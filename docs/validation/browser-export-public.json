@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-11T15:21:15.232Z",
+  "sourceFingerprint": "cebc4d1eed1a561c4691c440e1d75fbc1f1c5b48e749f629430b21b08a79c4a7",
+  "method": "Independently extracted and inspected the actual UI-downloaded ZIP from https://presales.bestdev.co.il/",
+  "fileName": "northstar-retail-proposal-pack (1).zip",
+  "sha256": "48fe6dfd14cf8266b151a3181f073fab2e8b7e054db27543cf16102999aef74f",
+  "sizeBytes": 9837,
+  "files": [
+    "README.txt",
+    "brief.json",
+    "proposal.md",
+    "architecture.svg",
+    "poc-plan.csv",
+    "decision-record.md",
+    "analysis.json"
+  ],
+  "passed": true,
+  "checks": [
+    "Seven fixed-path files extracted",
+    "Revision 2 with pinned revision 1",
+    "Five-second requirement",
+    "Authored wording preserved",
+    "Cloud event recommendation",
+    "Stale-review flag retained",
+    "ADR remains proposed"
+  ]
+}
