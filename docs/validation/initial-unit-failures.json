@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-11T14:58:42.226Z",
+  "total": 48,
+  "passed": 46,
+  "failed": 2,
+  "sourceHashes": {
+    "src/model.ts": "f19f7dee5640caa1bb95002c29a405fcc259bdf43b7da9647be1120ad5a06274",
+    "src/fixtures.ts": "8cb7796f10486cc15a5e37b67f1364926b62919ee4994919791f472290867a02",
+    "src/proposal.ts": "64711b901a1baf4dead649983a7dd46541efd7379457a6179fcebae0d59ee151",
+    "src/files.ts": "39c7d73ec611d09f255aeba1401f03341d862ac910cd59519f13ea2ec71cc250",
+    "src/storage.ts": "73d3c629c9bf7a50f6b164267bfecec02b6e2e9afac80cfb44a07e195b9b437c",
+    "src/App.tsx": "8281b90b362d61f9e02c73ab433c3cfaea37caedbcee478b3a1df5ed1d12e436",
+    "src/styles.css": "3a3ccc5182ed0c2fbac6eacbeef224d92b62cc09fa3fa4aa5e775d4a6e3a928a",
+    "src/main.tsx": "6a2474078d6739284443b96c993b2ef87744b5da6d8e32ee800ba92e110f6a2e",
+    "worker/index.ts": "a7dda9f223c3900383b9cdaee3c00352fec44245f2fb4834319422cfdb815167"
+  },
+  "cases": [
+    {
+      "name": "cost status and currency relabelling remain explicit in every proposal",
+      "result": "failed",
+      "reason": "The proposal said planning assumptions and not a binding quotation, but the reviewed-cost paragraph did not explicitly say not a vendor quotation."
+    },
+    {
+      "name": "valid field lengths cannot produce an export too large to reimport",
+      "result": "failed",
+      "reason": "The test used astral characters counted as two UTF-16 code units; its actual encoded size was below 128 KiB, so the expected size rejection was incorrect."
+    }
+  ]
+}

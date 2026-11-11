@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-11T15:07:01.379Z",
+  "passed": true,
+  "scope": "Actual ZIP downloaded through the local browser UI, then extracted independently",
+  "sha256": "22b17008dc053662c3f60816a0650accd75d0b6fa1c581d65962b2a50b61e0a9",
+  "bytes": 9844,
+  "files": [
+    "README.txt",
+    "brief.json",
+    "proposal.md",
+    "architecture.svg",
+    "poc-plan.csv",
+    "decision-record.md",
+    "analysis.json"
+  ],
+  "checks": [
+    "seven fixed artifact names",
+    "brief revision 2 and pinned revision 1",
+    "five-second target",
+    "preserved authored wording",
+    "stale review flag in Markdown"
+  ]
+}

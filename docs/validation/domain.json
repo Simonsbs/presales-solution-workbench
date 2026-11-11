@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-11-11T15:15:42.092Z",
+  "finishedAt": "2026-11-11T15:15:42.165Z",
+  "sourceHashes": {
+    "src/model.ts": "a14a90a68b3f151c83835b285a903ebd262e1ad900fab6ff70cb6ccb6ec8d0b4",
+    "src/fixtures.ts": "ec9581f8524a56636fecd8883a02c5a03fb217a4a89751c5d8ee2ed3b184186a",
+    "src/proposal.ts": "1d57429969a120428ea95fd2d185d9d6cc9938965fa9177a1af23b720844442a",
+    "src/files.ts": "5d149441fd1c31917fd63568edcb608323af971daeaac3aabed3d9195d7b3d5c",
+    "src/storage.ts": "35fbeec1fe9219ba3496cd86f662433fb3c91c1cb1f10996fa90ff5d12b8ef55",
+    "src/App.tsx": "d1790163ba400d96c87c94924a09c2ebc853584e8f80b76243085b94330c83fc",
+    "src/styles.css": "b620eceb87ea85e96c39014e9e5d7773a075490db00914f47abd76bb6298f669",
+    "src/main.tsx": "107a4f84a6b4fc715b861205f27d70072d99b7533b554c5d8f9edd8c4bca668e",
+    "worker/index.ts": "6fd8168fe42a2f8cfc498451bfeab9ee910ce09d9db1b2f1a251a88bcae055b4"
+  },
+  "sourceFingerprint": "cebc4d1eed1a561c4691c440e1d75fbc1f1c5b48e749f629430b21b08a79c4a7",
+  "scope": "Deterministic model and real ZIP export checks using fictional planning inputs. These are workbench tests, not completed customer PoCs or verified vendor capabilities.",
+  "cases": [
+    {
+      "name": "northstar: baseline decision and pack",
+      "passed": true,
+      "elapsedMs": 27.098,
+      "recommendation": "workflow",
+      "candidates": [
+        {
+          "id": "workflow",
+          "status": "conditional",
+          "score": 86.7,
+          "blockers": [],
+          "monthlyCents": 94144
+        },
+        {
+          "id": "events",
+          "status": "conditional",
+          "score": 70.6,
+          "blockers": [],
+          "monthlyCents": 165629
+        },
+        {
+          "id": "private",
+          "status": "blocked",
+          "score": 43.3,
+          "blockers": [
+            "A platform team is required to operate this private runtime.",
+            "The 11-week planning lead time exceeds the 9-week window."
+          ],
+          "monthlyCents": 353605
+        }
+      ],
+      "zipBytes": 9592
+    },
+    {
+      "name": "northstar: new constraint decision and pack",
+      "passed": true,
+      "elapsedMs": 6.083,
+      "recommendation": "events",
+      "candidates": [
+        {
+          "id": "workflow",
+          "status": "blocked",
+          "score": 86.7,
+          "blockers": [
+            "The 60s baseline cannot meet the 5s freshness target."
+          ],
+          "monthlyCents": 94144
+        },
+        {
+          "id": "events",
+          "status": "conditional",
+          "score": 70.6,
+          "blockers": [],
+          "monthlyCents": 165629
+        },
+        {
+          "id": "private",
+          "status": "blocked",
+          "score": 43.3,
+          "blockers": [
+            "A platform team is required to operate this private runtime.",
+            "The 11-week planning lead time exceeds the 9-week window."
+          ],
+          "monthlyCents": 353605
+        }
+      ],
+      "zipBytes": 9784
+    },
+    {
+      "name": "harbour: baseline decision and pack",
+      "passed": true,
+      "elapsedMs": 3.13,
+      "recommendation": "private",
+      "candidates": [
+        {
+          "id": "workflow",
+          "status": "blocked",
+          "score": 74.7,
+          "blockers": [
+            "This baseline runs outside the required private boundary.",
+            "This workflow baseline does not include customer-pinned residency."
+          ],
+          "monthlyCents": 80212
+        },
+        {
+          "id": "events",
+          "status": "blocked",
+          "score": 79.9,
+          "blockers": [
+            "This baseline runs outside the required private boundary."
+          ],
+          "monthlyCents": 162842
+        },
+        {
+          "id": "private",
+          "status": "conditional",
+          "score": 55,
+          "blockers": [],
+          "monthlyCents": 353140
+        }
+      ],
+      "zipBytes": 9508
+    },
+    {
+      "name": "harbour: new constraint decision and pack",
+      "passed": true,
+      "elapsedMs": 3.966,
+      "recommendation": null,
+      "candidates": [
+        {
+          "id": "workflow",
+          "status": "blocked",
+          "score": 74.7,
+          "blockers": [
+            "This baseline runs outside the required private boundary.",
+            "This workflow baseline does not include customer-pinned residency."
+          ],
+          "monthlyCents": 80212
+        },
+        {
+          "id": "events",
+          "status": "blocked",
+          "score": 79.9,
+          "blockers": [
+            "This baseline runs outside the required private boundary.",
+            "The design requires an application engineering owner."
+          ],
+          "monthlyCents": 162842
+        },
+        {
+          "id": "private",
+          "status": "blocked",
+          "score": 55,
+          "blockers": [
+            "A platform team is required to operate this private runtime."
+          ],
+          "monthlyCents": 353140
+        }
+      ],
+      "zipBytes": 9107
+    },
+    {
+      "name": "lumen: baseline decision and pack",
+      "passed": true,
+      "elapsedMs": 3.837,
+      "recommendation": "events",
+      "candidates": [
+        {
+          "id": "workflow",
+          "status": "blocked",
+          "score": 70.7,
+          "blockers": [
+            "This workflow baseline does not include customer-pinned residency.",
+            "This baseline has no local outbox for an intermittent source connection.",
+            "The 60s baseline cannot meet the 5s freshness target."
+          ],
+          "monthlyCents": 181300
+        },
+        {
+          "id": "events",
+          "status": "conditional",
+          "score": 89.2,
+          "blockers": [],
+          "monthlyCents": 183060
+        },
+        {
+          "id": "private",
+          "status": "conditional",
+          "score": 62.8,
+          "blockers": [],
+          "monthlyCents": 356510
+        }
+      ],
+      "zipBytes": 9816
+    },
+    {
+      "name": "lumen: new constraint decision and pack",
+      "passed": true,
+      "elapsedMs": 3.755,
+      "recommendation": "private",
+      "candidates": [
+        {
+          "id": "workflow",
+          "status": "blocked",
+          "score": 70.7,
+          "blockers": [
+            "This baseline runs outside the required private boundary.",
+            "This workflow baseline does not include customer-pinned residency.",
+            "This baseline has no local outbox for an intermittent source connection.",
+            "The 60s baseline cannot meet the 5s freshness target."
+          ],
+          "monthlyCents": 181300
+        },
+        {
+          "id": "events",
+          "status": "blocked",
+          "score": 89.2,
+          "blockers": [
+            "This baseline runs outside the required private boundary."
+          ],
+          "monthlyCents": 183060
+        },
+        {
+          "id": "private",
+          "status": "conditional",
+          "score": 62.8,
+          "blockers": [],
+          "monthlyCents": 356510
+        }
+      ],
+      "zipBytes": 9834
+    },
+    {
+      "name": "Northstar cost reconciliation against independent expected line totals",
+      "passed": true,
+      "elapsedMs": 0.123,
+      "estimate": {
+        "fixedCents": 28000,
+        "trafficCents": 18144,
+        "operationsCents": 48000,
+        "monthlyCents": 94144,
+        "setupCents": 600000,
+        "yearOneCents": 1729728,
+        "plannedEvents": 302400,
+        "plannedPeak": 504
+      }
+    },
+    {
+      "name": "conflicting deadline returns no recommendation",
+      "passed": true,
+      "elapsedMs": 0.153
+    },
+    {
+      "name": "one-cent budget boundary is respected",
+      "passed": true,
+      "elapsedMs": 0.169
+    },
+    {
+      "name": "intermittent connection excludes the no-outbox workflow baseline",
+      "passed": true,
+      "elapsedMs": 0.147
+    },
+    {
+      "name": "stale authored wording survives and is flagged in the exported proposal",
+      "passed": true,
+      "elapsedMs": 1.825
+    },
+    {
+      "name": "malformed and oversized imports fail without a draft",
+      "passed": true,
+      "elapsedMs": 0.603
+    }
+  ],
+  "evaluationTiming": {
+    "iterations": 300,
+    "p50Ms": 0.0372,
+    "p95Ms": 0.0666,
+    "runtime": "v24.12.0",
+    "platform": "win32",
+    "scope": "Local Node evaluation of three small fixture briefs, 100 evaluations each. Not browser load time, model generation latency, a throughput benchmark or an SLA."
+  },
+  "summary": {
+    "passed": 12,
+    "total": 12
+  }
+}
