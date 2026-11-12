@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://presales.bestdev.co.il/sitemap.xml

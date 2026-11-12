@@ -30,7 +30,7 @@ for (const file of await readdir("docs/validation")) {
     );
 }
 const types = {
-  ".html": "text/html; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8", ".xml": "application/xml; charset=utf-8", ".html": "text/html; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".svg": "image/svg+xml",
@@ -73,3 +73,5 @@ console.log(
   `Built ${Object.keys(assets).length} embedded assets. Source fingerprint ${metadata.sourceFingerprint}.`,
 );
 await import("./validate-artifact.mjs");
+
+await import("./check-seo.mjs");
